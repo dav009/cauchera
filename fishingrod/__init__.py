@@ -33,4 +33,5 @@ def extract_relations(text):
     texts = split_text_if_needed(text)
     for t in texts:
         yield t, ner(t)
+        # ToDo: feed entities and text into rel classifier
 
