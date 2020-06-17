@@ -27,11 +27,12 @@ def split_text_if_needed(text):
 
 def extract_relations(text):
     """
-    returns a list of relations
+    returns a list of candidates relations
     e1, r, e2
     """
     texts = split_text_if_needed(text)
     for t in texts:
         yield t, ner(t)
         # ToDo: feed entities and text into rel classifier
+        # filter extractions
 

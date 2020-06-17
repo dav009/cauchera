@@ -22,7 +22,7 @@ def join_b_i_tags(entities):
     remove this once these get solved:
     https://github.com/huggingface/transformers/issues/5077
     and https://github.com/huggingface/transformers/issues/4816
-    """ 
+    """
     last_tag = ""
     current_entity = ""
     entity_type = ""
@@ -33,7 +33,7 @@ def join_b_i_tags(entities):
             if current_entity:
                 output_entities.append((current_entity, entity_type))
             entity_type = current_tag.split("-")[1]
-            
+
             current_entity = i["word"]
             if current_entity.startswith("##"):
                 current_entity = current_entity.replace("##", "")
