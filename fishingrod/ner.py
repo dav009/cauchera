@@ -19,8 +19,9 @@ def is_sent_too_long_for_ner(text):
 def join_b_i_tags(entities):
     """
     fix over hugging face grouped entities bug
-    # remove this once https://github.com/huggingface/transformers/issues/5077
-    # and https://github.com/huggingface/transformers/issues/4816
+    remove this once these get solved:
+    https://github.com/huggingface/transformers/issues/5077
+    and https://github.com/huggingface/transformers/issues/4816
     """ 
     last_tag = ""
     current_entity = ""
